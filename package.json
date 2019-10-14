@@ -6,14 +6,24 @@
     "web-ext": "^3.2.0"
   },
   "dependencies": {
-    "webextension-polyfill-ts": "^0.10.0"
+    "@shopify/polaris": "^4.5.0",
+    "add": "^2.0.6",
+    "generate-password": "^1.4.2",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "webextension-polyfill-ts": "^0.10.0",
+    "yarn": "^1.19.1"
   },
   "scripts": {
     "watch": "npm-run-all -p 'watch:*'",
     "build": "rm -rf .cache extension/dist && npm-run-all -p 'build:*'",
     "watch:background": "./scripts/watch.sh background",
     "build:background": "./scripts/build.sh background",
-    "dev:firefox": "cd extension && web-ext run"
+    "watch:popup": "./scripts/watch.sh popup",
+    "build:popup": "./scripts/build.sh popup",
+    "watch:content": "./scripts/watch.sh content",
+    "build:content": "./scripts/build.sh content",
+    "dev:firefox": "cd extension && web-ext run --verbose"
   },
   "license": "MIT"
 }

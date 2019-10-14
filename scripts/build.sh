@@ -1,7 +1,7 @@
 #!/bin/sh
 ENTRYPOINT=$1
 
-if [ "$ENTRYPOINT" = "background" ]  || [ "$ENTRYPOINT" = "contentscript" ]; then
+if [ "$ENTRYPOINT" = "background" ]  || [ "$ENTRYPOINT" = "content" ]; then
     TYPE="ts"
 else
     TYPE="html"

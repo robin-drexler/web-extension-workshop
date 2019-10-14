@@ -9,5 +9,15 @@
   "background": {
     "scripts": ["/dist/background/background.js"]
   },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["/dist/content/content.js"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": "images/icon_128.png",
+    "default_popup": "/dist/popup/popup.html"
+  },
   "manifest_version": 2
 }
